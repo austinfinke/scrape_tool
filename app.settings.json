@@ -1,0 +1,88 @@
+{
+	"basePath": "https://www.acehandymanservices.com/blog/",
+	"scrapeBasePath": true,
+	"paths": [],
+	"outputPath": "C:/Users/afinke/Desktop/scrape.json",
+	"outputFormat": "",
+	"parentSelector": "#main article",
+	"selections": [
+		{
+			"name": "heading",
+			"content": {
+				"selector": ".entry-title a",
+				"excludes": []
+			},
+			"type": "string"
+		},
+		{
+			"name": "post",
+			"content": {
+				"selector": ".entry-content",
+				"excludes": [
+					":where([href='https://www.acehandymanservices.com/#book-online'])",
+					":where([href='https://www.handymanmatters.com/#book-online'])"
+				]
+			},
+			"type": "html"
+		},
+		{
+			"name": "datePublished",
+			"content": {
+				"selector": ".posted-on a time",
+				"excludes": []
+			},
+			"type": "string"
+		},
+		{
+			"name": "author",
+			"content": {
+				"selector": ".byline a",
+				"excludes": []
+			},
+			"type": "string"
+		},
+		{
+			"name": "category",
+			"content": {
+				"selector": ".cat-links a",
+				"excludes": []
+			},
+			"type": "string"
+		}
+	],
+	"keepExcludes": true,
+	"excludedRemapping": [
+		{
+			"name": "ctaHref",
+			"content": {
+				"selector": ":where([href='https://www.acehandymanservices.com/#book-online'])",
+				"excludes": []
+			},
+			"type": "attribute:href"
+		},
+		{
+			"name": "ctaHref",
+			"content": {
+				"selector": ":where([href='https://www.handymanmatters.com/#book-online'])",
+				"excludes": []
+			},
+			"type": "attribute:href"
+		},
+		{
+			"name": "ctaLinkName",
+			"content": {
+				"selector": ":where([href='https://www.acehandymanservices.com/#book-online'])",
+				"excludes": []
+			},
+			"type": "string"
+		},
+		{
+			"name": "ctaLinkName",
+			"content": {
+				"selector": ":where([href='https://www.handymanmatters.com/#book-online'])",
+				"excludes": []
+			},
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "scrape_html_to_json",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "npm run clean && npm run build && npm start",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "eslint": "eslint . --ext js.,.ts"
+  },
+  "keywords": [],
+  "author": "a. finke",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "node-fetch": "^3.2.4",
+    "node-html-parser": "^5.3.3",
+    "typescript": "^4.7.0-dev.20220503"
+  }
+}
